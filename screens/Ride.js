@@ -149,11 +149,11 @@ export default class RideScreen extends Component {
           //  bikeAssigned: doc.data().bike_assigned
           //});
 
-          //this.setState({
-          //  userName: doc.data().name,
-          //  userId: doc.data().id,
-          //  bikeAssigned: doc.data().bike_assigned
-          //});
+          this.setState({
+            userName: doc.data().name,
+            userId: doc.data().id,
+            bikeAssigned: doc.data().bike_assigned
+          });
 
         });
       });
@@ -174,7 +174,8 @@ export default class RideScreen extends Component {
           // se a bicicleta estiver disponível, o tipo de transação será "rented",
           // caso contrário, será "return"
 
-          //transactionType = doc.data().is_bike_available ? "rented" : "return";
+          
+        transactionType = doc.data().is_bike_available ? "rented" : "return";
           //transactionType = doc.data().is_bike_available ? "rented" ? "return";
           //transactionType === doc.data().is_bike_available ? "rented" : "return";
           //transactionType = doc.data().is_bike_available ? "rented" "return";
